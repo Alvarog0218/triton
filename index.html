@@ -33,21 +33,41 @@
                     <div class="w-8 h-8 bg-blue-900 rounded flex items-center justify-center text-white font-bold">T</div>
                     <span class="font-bold text-xl text-slate-900 tracking-tight">TRITÓN <span class="text-blue-600 font-light">ENERGY</span></span>
                 </div>
+                
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                     <a href="#resumen" class="hover:text-blue-900 transition-colors">Resumen</a>
                     <a href="#simulador" class="hover:text-blue-900 transition-colors">Simulador Financiero</a>
                     <a href="#oferta" class="hover:text-blue-900 transition-colors">Oferta y Retorno</a>
                     <a href="#cronograma" class="hover:text-blue-900 transition-colors">Cronograma</a>
                 </div>
-                <div class="text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full border border-slate-200">
-                    <i class="fas fa-lock mr-1"></i> Documento Privado
+
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:block text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full border border-slate-200">
+                        <i class="fas fa-lock mr-1"></i> Documento Privado
+                    </div>
+                    
+                    <!-- Mobile Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#resumen" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-900 hover:bg-slate-50">Resumen</a>
+                <a href="#simulador" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-900 hover:bg-slate-50">Simulador Financiero</a>
+                <a href="#oferta" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-900 hover:bg-slate-50">Oferta y Retorno</a>
+                <a href="#cronograma" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-900 hover:bg-slate-50">Cronograma</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="resumen" class="relative bg-slate-900 text-white py-20 overflow-hidden">
+    <header id="resumen" class="relative bg-slate-900 text-white py-12 md:py-20 overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518459384541-e07459ef70f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
         
@@ -57,7 +77,7 @@
                     <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
                     Oportunidad de Arbitraje Logístico
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
                     Despliegue Operativo <br>
                     <span class="text-blue-400">Unidad Móvil Midland</span>
                 </h1>
@@ -127,7 +147,7 @@
     </header>
 
     <!-- The Asset Section -->
-    <section id="activo" class="py-20 bg-white">
+    <section id="activo" class="py-12 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-slate-900">El Activo y La Tecnología</h2>
@@ -174,7 +194,7 @@
     </section>
 
     <!-- Financial Simulator (The Core) -->
-    <section id="simulador" class="py-20 bg-slate-100 border-y border-slate-200">
+    <section id="simulador" class="py-12 md:py-20 bg-slate-100 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
                 <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Transparencia Financiera</span>
@@ -277,7 +297,7 @@
     </section>
 
     <!-- The Deal Structure -->
-    <section id="oferta" class="py-20 bg-white">
+    <section id="oferta" class="py-12 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -351,43 +371,43 @@
             <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Cronograma de Ejecución</h2>
             
             <div class="relative">
-                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-200"></div>
+                <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-200"></div>
                 
                 <!-- Step 1 -->
-                <div class="relative flex items-center justify-between mb-12">
-                    <div class="w-5/12 text-right pr-8">
+                <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+                    <div class="w-full md:w-5/12 text-left md:text-right pl-12 md:pl-0 pr-0 md:pr-8 order-1">
                         <h4 class="text-lg font-bold text-slate-900">Meses 1-2: Inversión y Overhaul</h4>
                         <p class="text-sm text-slate-600 mt-2">Compra de repuestos, reacondicionamiento mecánico y eléctrico profundo (2 meses) en talleres de Bucaramanga.</p>
                     </div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-900 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">1-2</div>
-                    <div class="w-5/12 pl-8 text-slate-400 text-sm font-mono">Uso de Fondos: 50%</div>
+                    <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 top-0 md:top-1/2 w-10 h-10 bg-blue-900 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">1-2</div>
+                    <div class="w-full md:w-5/12 pl-12 md:pl-8 text-slate-400 text-sm font-mono order-2 md:order-3 mt-2 md:mt-0">Uso de Fondos: 50%</div>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="relative flex items-center justify-between mb-12">
-                    <div class="w-5/12 text-right pr-8 text-slate-400 text-sm font-mono">Uso de Fondos: 30%</div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-slate-600 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">3</div>
-                    <div class="w-5/12 pl-8">
+                <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+                    <div class="w-full md:w-5/12 text-left md:text-right pl-12 md:pl-0 pr-0 md:pr-8 text-slate-400 text-sm font-mono order-2 md:order-1 mt-2 md:mt-0">Uso de Fondos: 30%</div>
+                    <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 top-0 md:top-1/2 w-10 h-10 bg-slate-600 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">3</div>
+                    <div class="w-full md:w-5/12 pl-12 md:pl-8 order-1 md:order-3">
                         <h4 class="text-lg font-bold text-slate-900">Mes 3: Logística Internacional</h4>
                         <p class="text-sm text-slate-600 mt-2">Traslado a puerto, trámites aduaneros (DIAN/CBP), flete marítimo y transporte terrestre a Midland.</p>
                     </div>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="relative flex items-center justify-between mb-12">
-                    <div class="w-5/12 text-right pr-8">
+                <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+                    <div class="w-full md:w-5/12 text-left md:text-right pl-12 md:pl-0 pr-0 md:pr-8 order-1">
                         <h4 class="text-lg font-bold text-slate-900">Mes 4: Instalación y Puesta en Marcha</h4>
                         <p class="text-sm text-slate-600 mt-2">Setup en campo, conexión a líneas de flujo, capacitación de personal y certificación operativa.</p>
                     </div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-slate-600 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">4</div>
-                    <div class="w-5/12 pl-8 text-slate-400 text-sm font-mono">Uso de Fondos: 20%</div>
+                    <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 top-0 md:top-1/2 w-10 h-10 bg-slate-600 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">4</div>
+                    <div class="w-full md:w-5/12 pl-12 md:pl-8 text-slate-400 text-sm font-mono order-2 md:order-3 mt-2 md:mt-0">Uso de Fondos: 20%</div>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="relative flex items-center justify-between">
-                    <div class="w-5/12 text-right pr-8 text-green-600 font-bold text-sm font-mono">$$$ Retorno</div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-green-500 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">5</div>
-                    <div class="w-5/12 pl-8">
+                <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between">
+                    <div class="w-full md:w-5/12 text-left md:text-right pl-12 md:pl-0 pr-0 md:pr-8 text-green-600 font-bold text-sm font-mono order-2 md:order-1 mt-2 md:mt-0">$$$ Retorno</div>
+                    <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 top-0 md:top-1/2 w-10 h-10 bg-green-500 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">5</div>
+                    <div class="w-full md:w-5/12 pl-12 md:pl-8 order-1 md:order-3">
                         <h4 class="text-lg font-bold text-slate-900">Mes 5: Funcionamiento y Flujo de Caja</h4>
                         <p class="text-sm text-slate-600 mt-2">Inicio oficial de facturación y generación de retorno de capital al inversionista.</p>
                     </div>
