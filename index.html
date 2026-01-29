@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorando de Inversión | Proyecto Texas</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Entry Point -->
+    <script type="module" src="/main.js"></script>
+
+    <!-- Chosen Palette: Industrial Trust (Navy Blue #1e3a8a, Slate Gray #64748b, White #ffffff, Alert Red #ef4444 for stress tests) -->
+    <!-- Updated Parameters V4.1: 
+         - Location: Bucaramanga (Updated from Girón)
+         - Investment: $900M COP
+         - Sales Price: $60 USD
+         - OPEX: $40 USD
+         - Equity: 10% (Flat rate from day 1)
+    -->
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-900 rounded flex items-center justify-center text-white font-bold">T</div>
+                    <span class="font-bold text-xl text-slate-900 tracking-tight">TRITÓN <span class="text-blue-600 font-light">ENERGY</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#resumen" class="hover:text-blue-900 transition-colors">Resumen</a>
+                    <a href="#simulador" class="hover:text-blue-900 transition-colors">Simulador Financiero</a>
+                    <a href="#oferta" class="hover:text-blue-900 transition-colors">Oferta y Retorno</a>
+                    <a href="#cronograma" class="hover:text-blue-900 transition-colors">Cronograma</a>
+                </div>
+                <div class="text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full border border-slate-200">
+                    <i class="fas fa-lock mr-1"></i> Documento Privado
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="resumen" class="relative bg-slate-900 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518459384541-e07459ef70f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-blue-900/50 border border-blue-700/50 rounded-full px-4 py-1 text-sm text-blue-200 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Oportunidad de Arbitraje Logístico
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    Despliegue Operativo <br>
+                    <span class="text-blue-400">Unidad Móvil Midland</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+                    Tritón Energy presenta una oportunidad de inversión privada para capitalizar el traslado y reacondicionamiento de un activo industrial existente hacia un contrato activo en Texas.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6 mb-8 border-t border-slate-700 pt-8">
+                    <div>
+                        <p class="text-slate-400 text-sm mb-1">Inversión Requerida</p>
+                        <p class="text-3xl font-bold text-white">$900M <span class="text-sm font-normal text-slate-400">COP</span></p>
+                    </div>
+                    <div>
+                        <p class="text-slate-400 text-sm mb-1">Destino de Fondos</p>
+                        <p class="text-xl font-semibold text-white">Logística & Overhaul</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button onclick="document.getElementById('simulador').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-lg shadow-blue-900/50 flex items-center gap-2">
+                        <i class="fas fa-calculator"></i> Ver Números Reales
+                    </button>
+                    <button onclick="document.getElementById('activo').scrollIntoView({behavior: 'smooth'})" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-all backdrop-blur-sm border border-white/10">
+                        Conocer el Activo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Key Metric Card -->
+            <div class="hidden lg:block">
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fas fa-balance-scale text-blue-400"></i>
+                        La Tesis del Negocio
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Origen: Colombia</h4>
+                                <p class="text-slate-400 text-sm">Activo ocioso. No genera caja. Costo de almacenamiento.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center -my-2">
+                            <i class="fas fa-arrow-down text-slate-500 animate-bounce"></i>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center shrink-0">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Destino: Midland, Texas</h4>
+                                <p class="text-slate-400 text-sm">Contrato activo. Demanda insatisfecha. Pago en USD.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                        <p class="text-center text-sm text-slate-300">
+                            La inversión es el <span class="text-blue-400 font-bold">combustible logístico</span> para conectar estos dos puntos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Asset Section -->
+    <section id="activo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">El Activo y La Tecnología</h2>
+                  <div class="mt-8 mb-12">
+                <img src="/espacio.jpeg" alt="Espacio de trabajo y maquinaria" class="rounded-xl shadow-lg w-full object-cover h-[600px]">
+            </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Movilidad Total</h3>
+                    <p class="text-slate-600 text-sm">
+                        A diferencia de la competencia en Texas (plantas fijas), nuestra unidad va al pozo. Eliminamos costos de transporte para la petrolera, lo que protege nuestro margen.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Separación Trifásica</h3>
+                    <p class="text-slate-600 text-sm">
+                        Tecnología de separación de Agua, Crudo y Sólidos. Recuperamos crudo apto para venta y agua para reinyección, cumpliendo normativa ambiental de la EPA.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-700 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Estado: Overhaul</h3>
+                    <p class="text-slate-600 text-sm">
+                        El equipo requiere actualización eléctrica (a 480V estándar EE.UU.) y mantenimiento de bombas antes de embarcar. Este es el uso principal de los fondos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Simulator (The Core) -->
+    <section id="simulador" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Transparencia Financiera</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-4">Simulador de Escenarios Operativos</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl">
+                    Hemos modelado el negocio bajo un <strong>"Escenario Ácido" (Conservador)</strong>. Hemos ajustado el precio de venta a la baja ($60 USD) para demostrar que el negocio sigue siendo rentable incluso en condiciones adversas de mercado.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8">
+                <!-- Controls -->
+                <div class="lg:col-span-4 bg-white p-6 rounded-xl shadow-sm border border-slate-200 h-fit">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fas fa-sliders-h text-slate-400"></i> Variables de Entrada
+                    </h3>
+                    
+                    <!-- Slider 1 -->
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <label class="text-sm font-medium text-slate-700">Capacidad Diaria (Barriles)</label>
+                            <span id="capacityVal" class="text-sm font-bold text-blue-700">1200</span>
+                        </div>
+                        <input type="range" id="capacityInput" min="1000" max="2000" step="100" value="1200" 
+                            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer slider-thumb">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>1000 (Mín)</span>
+                            <span>2000 (Técnico)</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2 -->
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <label class="text-sm font-medium text-slate-700">Días Operativos / Mes</label>
+                            <span id="daysVal" class="text-sm font-bold text-blue-700">24</span>
+                        </div>
+                        <input type="range" id="daysInput" min="20" max="30" step="1" value="24" 
+                            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer slider-thumb">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>20 (Paradas)</span>
+                            <span>30 (Full)</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 3 -->
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <label class="text-sm font-medium text-slate-700">Costo Operativo (OPEX USD)</label>
+                            <span id="opexVal" class="text-sm font-bold text-red-600">$40</span>
+                        </div>
+                        <input type="range" id="opexInput" min="25" max="50" step="1" value="40" 
+                            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer slider-thumb">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>$25 (Técnico)</span>
+                            <span>$50 (Crítico)</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-100 text-sm text-yellow-800">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        <strong>Nota:</strong> El precio de venta por barril se ha fijado en <strong>$60 USD</strong> para este ejercicio conservador.
+                    </div>
+                    
+                    <button onclick="resetSim()" class="mt-4 w-full py-2 text-sm text-slate-500 hover:text-slate-800 underline">
+                        Restablecer a Escenario Conservador
+                    </button>
+                </div>
+
+                <!-- Outputs -->
+                <div class="lg:col-span-8 grid grid-rows-2 gap-8">
+                    <!-- KPI Cards -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-xs text-slate-500 uppercase font-semibold">Utilidad Neta / Barril</p>
+                            <p id="netPerBarrel" class="text-2xl font-bold text-slate-900 mt-2">$20</p>
+                            <p class="text-xs text-green-600 mt-1 font-medium">Margen Neto (Ácido)</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-xs text-slate-500 uppercase font-semibold">Utilidad Mensual (Total)</p>
+                            <p id="monthlyNet" class="text-2xl font-bold text-slate-900 mt-2">$576,000</p>
+                            <p class="text-xs text-slate-400 mt-1">USD</p>
+                        </div>
+                        <div class="bg-blue-900 text-white p-4 rounded-xl shadow-lg ring-4 ring-blue-50/50">
+                            <p class="text-xs text-blue-200 uppercase font-semibold">Su Participación (10%)</p>
+                            <p id="investorShare" class="text-2xl font-bold mt-2">$57,600</p>
+                            <p class="text-xs text-blue-200 mt-1">Mensual (USD)</p>
+                        </div>
+                    </div>
+
+                    <!-- Chart -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="text-sm font-bold text-slate-700 mb-4 ml-2">Proyección de Flujo de Caja</h4>
+                        <div class="chart-container">
+                            <canvas id="financialChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Deal Structure -->
+    <section id="oferta" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Oferta: 10% Equity Vitalicio</h2>
+                    <p class="text-slate-600 mb-8 text-lg">
+                        Entendemos el costo de oportunidad de su capital y las nuevas condiciones de mercado ($60/bbl). Ofrecemos una participación sólida y directa.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="relative pl-8 border-l-2 border-blue-900">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-900"></div>
+                            <h3 class="text-xl font-bold text-slate-900">Participación Directa (10%)</h3>
+                            <p class="text-sm text-slate-500 mb-2 font-mono">Desde el Día 1 de Operación</p>
+                            <p class="text-slate-700">
+                                Usted recibe el <strong>10% de la Utilidad Neta Total</strong> mensualmente. No hay fases complejas ni letras chicas. Su inversión genera dividendos inmediatos al entrar en operación.
+                            </p>
+                            <div class="mt-3 flex items-center gap-4">
+                                <div>
+                                    <p class="text-xs text-slate-500">Rentabilidad Mensual Est.</p>
+                                    <p class="font-bold text-slate-900 text-lg">~$57,600 USD</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 border-l-2 border-green-500">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-500"></div>
+                            <h3 class="text-xl font-bold text-slate-900">Recuperación de Inversión</h3>
+                            <p class="text-sm text-slate-500 mb-2 font-mono">Proyección ROI</p>
+                            <p class="text-slate-700">
+                                Gracias al alto volumen de procesamiento, su 10% de participación permite recuperar el capital ($900M COP) en un tiempo récord.
+                            </p>
+                            <div class="mt-3 bg-green-50 text-green-800 text-sm font-semibold px-3 py-2 rounded inline-block">
+                                <i class="fas fa-clock mr-1"></i> Recuperación est. en ~4 Meses de Operación
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-8 rounded-2xl text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600 rounded-full filter blur-3xl opacity-20 -mr-16 -mt-16"></div>
+                    <h3 class="text-xl font-bold mb-6">Resumen de la Inversión</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-white/10 pb-2">
+                            <span class="text-slate-400">Monto Solicitado</span>
+                            <span class="font-bold text-xl">$900.000.000 COP</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/10 pb-2">
+                            <span class="text-slate-400">Participación Equity</span>
+                            <span class="font-bold text-yellow-400">10% Vitalicio</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/10 pb-2">
+                            <span class="text-slate-400">Recuperación Est.</span>
+                            <span class="font-bold text-green-400">~4 Meses (Operativos)</span>
+                        </li>
+                        <li class="flex justify-between pt-2">
+                            <span class="text-slate-400">Riesgo Cambiario</span>
+                            <span class="font-bold text-blue-400">Ingresos en USD</span>
+                        </li>
+                    </ul>
+                    <button class="w-full mt-8 bg-white text-slate-900 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors">
+                        Solicitar Reunión Técnica
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="cronograma" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Cronograma de Ejecución</h2>
+            
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-200"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative flex items-center justify-between mb-12">
+                    <div class="w-5/12 text-right pr-8">
+                        <h4 class="text-lg font-bold text-slate-900">Meses 1-2: Inversión y Overhaul</h4>
+                        <p class="text-sm text-slate-600 mt-2">Compra de repuestos, reacondicionamiento mecánico y eléctrico profundo (2 meses) en talleres de Bucaramanga.</p>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-900 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">1-2</div>
+                    <div class="w-5/12 pl-8 text-slate-400 text-sm font-mono">Uso de Fondos: 50%</div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex items-center justify-between mb-12">
+                    <div class="w-5/12 text-right pr-8 text-slate-400 text-sm font-mono">Uso de Fondos: 30%</div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-slate-600 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">3</div>
+                    <div class="w-5/12 pl-8">
+                        <h4 class="text-lg font-bold text-slate-900">Mes 3: Logística Internacional</h4>
+                        <p class="text-sm text-slate-600 mt-2">Traslado a puerto, trámites aduaneros (DIAN/CBP), flete marítimo y transporte terrestre a Midland.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex items-center justify-between mb-12">
+                    <div class="w-5/12 text-right pr-8">
+                        <h4 class="text-lg font-bold text-slate-900">Mes 4: Instalación y Puesta en Marcha</h4>
+                        <p class="text-sm text-slate-600 mt-2">Setup en campo, conexión a líneas de flujo, capacitación de personal y certificación operativa.</p>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-slate-600 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">4</div>
+                    <div class="w-5/12 pl-8 text-slate-400 text-sm font-mono">Uso de Fondos: 20%</div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative flex items-center justify-between">
+                    <div class="w-5/12 text-right pr-8 text-green-600 font-bold text-sm font-mono">$$$ Retorno</div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-green-500 rounded-full border-4 border-slate-50 flex items-center justify-center text-white text-sm z-10">5</div>
+                    <div class="w-5/12 pl-8">
+                        <h4 class="text-lg font-bold text-slate-900">Mes 5: Funcionamiento y Flujo de Caja</h4>
+                        <p class="text-sm text-slate-600 mt-2">Inicio oficial de facturación y generación de retorno de capital al inversionista.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Matrix -->
+    <section class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8">Análisis de Riesgos y Mitigación</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 border border-slate-200 rounded-lg">
+                    <h4 class="font-bold text-slate-900 mb-2 text-sm uppercase tracking-wide">Riesgo: Cancelación Contrato</h4>
+                    <p class="text-sm text-slate-600">
+                        <strong class="text-blue-700">Mitigación:</strong> El activo es 100% móvil. Si el cliente A falla, el equipo se mueve al cliente B en 24 horas. La demanda en Texas supera la oferta.
+                    </p>
+                </div>
+                <div class="p-6 border border-slate-200 rounded-lg">
+                    <h4 class="font-bold text-slate-900 mb-2 text-sm uppercase tracking-wide">Riesgo: Fallo Mecánico</h4>
+                    <p class="text-sm text-slate-600">
+                        <strong class="text-blue-700">Mitigación:</strong> El OPEX proyectado ($40 USD) está inflado para incluir un fondo de reserva inmediato para componentes críticos.
+                    </p>
+                </div>
+                <div class="p-6 border border-slate-200 rounded-lg">
+                    <h4 class="font-bold text-slate-900 mb-2 text-sm uppercase tracking-wide">Riesgo: Cambiario</h4>
+                    <p class="text-sm text-slate-600">
+                        <strong class="text-blue-700">Mitigación:</strong> Los ingresos son en Dólares (USD). La devaluación del peso juega a favor del inversionista al repatriar utilidades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm">
+        <p class="mb-2">Tritón Energy - Documento Confidencial</p>
+        <p>Bucaramanga, Santander - Midland, Texas</p>
+    </footer>
+
+</body>
+</html>
