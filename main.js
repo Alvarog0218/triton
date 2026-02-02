@@ -3,7 +3,7 @@ import Chart from 'chart.js/auto';
 
 // Constants
 const PRICE_PER_BARREL = 60; // UPDATED: Lower price scenario
-const INVESTOR_EQUITY_PERCENT = 0.10; // UPDATED: 10% Equity
+const INVESTOR_EQUITY_PERCENT = 0.05; // UPDATED: 5% Equity
 
 // State
 let state = {
